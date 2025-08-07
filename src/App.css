@@ -1,0 +1,359 @@
+@import './colours.css';
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  max-width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.App-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  max-height: 100vh;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.Outer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Title {
+  font-size: 30;
+  font-weight: bold;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.Title-Container {
+  justify-content: left;
+  color: black;
+}
+
+.lastUpdated {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.Graph {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Graph-title {
+  color: #483C32;
+  font-weight: bold;
+}
+
+.Tables {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Table {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Table-actual {
+  width: 100%;
+  box-sizing: border-box;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  padding: 0 10px 0 10px;
+}
+
+.Table-row {
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.Table-row td {
+  background-color: var(--background-color);
+  width: 100%;
+  padding: 10px;
+}
+
+.Table-row td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #6d6d6d;
+}
+
+.Table-row td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.Table-header {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.NewAccred-list {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: var(--background-color);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.searchBar {
+  padding: 5px;
+  width: 250px;
+  border: 0px solid var(--secondary-color);
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+.searchBar::placeholder {
+  color: #b3b3b3
+}
+
+.searchBar:focus {
+  outline: none;
+  box-shadow: 0 0 2px var(--accent-color);
+}
+
+.Login-Container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(205, 240, 255);
+  background-size: 200% 200%;
+  animation: waveBackground 5s linear infinite;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.Login-bg {
+  fill:red;
+}
+
+@keyframes waveBackground {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.Login-Title-Container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Login-Title {
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+
+.Login-Card-Container {
+  width: 40%;
+  height: 100%;
+}
+
+.Hidden-Title {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .Tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Graph {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .Login-Container {
+    height: 100%;
+  }
+
+  .Login-Card-Container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Login-Title-Container {
+    display: none;
+  }
+
+  .Login-Card-Title {
+    display: none;
+  }
+
+  .Hidden-Title {
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0px;
+    color: var(--dark-blue);
+    align-items: center;
+  }
+
+  .Login-Card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-inline: 50px;
+  padding-block: 80px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+}
+
+.Login-Card-Title {
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 100px;
+  color: black;
+}
+
+.Login-Card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-inline: 50px;
+  padding-block: 80px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Login-input {
+  margin-bottom: 0px;
+  height: 30px;
+  width: 85%;
+  border-radius: 7px;
+  background-color: white;
+  border: 1px solid rgb(196, 196, 196);
+  padding-left: 10px;
+}
+
+.Login-input:focus {
+  outline: none;
+  box-shadow: 0 0 2px var(--accent-color);
+}
+
+.Login-error {
+  color: red;
+  font-size: 13px;
+  text-align: left;
+  width: 85%;
+}
+
+.Login-button {
+  margin-top: 10px;
+  width: 85%;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.Login-button:hover {
+  background-color: #3987da;
+}

@@ -1,0 +1,64 @@
+.govSupply-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.breakdown-card {
+    width: 30%;
+}
+
+.breakdown {
+    padding: 20px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.breakdown-header {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.breakdown >* {
+    padding: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgb(168, 168, 168);
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-card {
+    display: flex;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .govSupply-container {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 100%;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .breakdown-card {
+        width: 100%;
+    }
+
+    .chart-card {
+        display: flex;
+        flex: 1;
+        width: 100%;
+    }
+}
